@@ -1,0 +1,38 @@
+\hypertarget{group__gumbel}{}\doxysection{Gumbel Copula Functions}
+\label{group__gumbel}\index{Gumbel Copula Functions@{Gumbel Copula Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+real \mbox{\hyperlink{group__gumbel_ga6590db476c4f85fbf9040d32b3b1a353}{gumbel\+\_\+copula\+\_\+lpdf}} (real u, real v, real theta)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__gumbel_ga6590db476c4f85fbf9040d32b3b1a353}\label{group__gumbel_ga6590db476c4f85fbf9040d32b3b1a353}} 
+\index{Gumbel Copula Functions@{Gumbel Copula Functions}!gumbel\_copula\_lpdf@{gumbel\_copula\_lpdf}}
+\index{gumbel\_copula\_lpdf@{gumbel\_copula\_lpdf}!Gumbel Copula Functions@{Gumbel Copula Functions}}
+\doxysubsubsection{\texorpdfstring{gumbel\_copula\_lpdf()}{gumbel\_copula\_lpdf()}}
+{\footnotesize\ttfamily real gumbel\+\_\+copula\+\_\+lpdf (\begin{DoxyParamCaption}\item[{real}]{u,  }\item[{real}]{v,  }\item[{real}]{theta }\end{DoxyParamCaption})}
+
+Gumbel Copula Log Density
+
+Copyright Ben Goodrich \href{https://groups.google.com/g/stan-users/c/hnUtkMYlLhQ/m/UZURBv2_AAAJ}{\texttt{ https\+://groups.\+google.\+com/g/stan-\/users/c/hn\+Utk\+MYl\+Lh\+Q/m/\+UZURBv2\+\_\+\+AAAJ}} Accessed Feb. 5, 2021
+
+Archimedean family of Gumbel with parametric generator \[ \exp(-t^{1/\theta}), t \in [0, \infty] \] with $\theta \in [1, \infty)$. The range of admissible Kendall’s tau, as well as that of the upper taildependence coefficient, is $[0,1)$. Note that this copula does not allow for lower tail dependence.
+
+\href{https://cran.r-project.org/web/packages/copula/copula.pdf}{\texttt{ https\+://cran.\+r-\/project.\+org/web/packages/copula/copula.\+pdf}} \char`\"{}copula\char`\"{} R package in the cop\+Families documentation accessed Feb. 5, 2021
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Real number on (0,1\mbox{]}, not checked but function will return NaN \\
+\hline
+{\em v} & Real number on (0,1\mbox{]}, not checked but function will return NaN \\
+\hline
+{\em theta} & Real number $>$= 1, will throw otherwise \\
+\hline
+{\em log} & density \\
+\hline
+\end{DoxyParams}

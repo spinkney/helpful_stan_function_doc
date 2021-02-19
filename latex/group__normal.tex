@@ -1,0 +1,108 @@
+\hypertarget{group__normal}{}\doxysection{Normal Copula Functions}
+\label{group__normal}\index{Normal Copula Functions@{Normal Copula Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+real \mbox{\hyperlink{group__normal_gaeceb683df43c85469ececa537d2e2266}{normal\+\_\+copula\+\_\+lpdf}} (real u, real v, real rho)
+\item 
+real \mbox{\hyperlink{group__normal_ga09447a56c60491b2e53ed77922e68ece}{normal\+\_\+copula\+\_\+vector\+\_\+lpdf}} (vector u, vector v, real rho)
+\item 
+real \mbox{\hyperlink{group__normal_ga2aac932cd087e9111ca72c895ee6fbe0}{multi\+\_\+normal\+\_\+copula\+\_\+lpdf}} (matrix u, matrix L)
+\item 
+real \mbox{\hyperlink{group__normal_ga0cfca0aba6b1049472eac7cafe169143}{bivariate\+\_\+normal\+\_\+copula\+\_\+cdf}} (vector u, real rho)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__normal_ga0cfca0aba6b1049472eac7cafe169143}\label{group__normal_ga0cfca0aba6b1049472eac7cafe169143}} 
+\index{Normal Copula Functions@{Normal Copula Functions}!bivariate\_normal\_copula\_cdf@{bivariate\_normal\_copula\_cdf}}
+\index{bivariate\_normal\_copula\_cdf@{bivariate\_normal\_copula\_cdf}!Normal Copula Functions@{Normal Copula Functions}}
+\doxysubsubsection{\texorpdfstring{bivariate\_normal\_copula\_cdf()}{bivariate\_normal\_copula\_cdf()}}
+{\footnotesize\ttfamily real bivariate\+\_\+normal\+\_\+copula\+\_\+cdf (\begin{DoxyParamCaption}\item[{vector}]{u,  }\item[{real}]{rho }\end{DoxyParamCaption})}
+
+Bivariate Normal Copula cdf
+
+Copyright 2021, Sean Pinkney
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Vector size 2 \\
+\hline
+{\em rho} & Real on \mbox{[}-\/1, 1\mbox{]} \\
+\hline
+{\em cumulative} & density \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__normal_ga2aac932cd087e9111ca72c895ee6fbe0}\label{group__normal_ga2aac932cd087e9111ca72c895ee6fbe0}} 
+\index{Normal Copula Functions@{Normal Copula Functions}!multi\_normal\_copula\_lpdf@{multi\_normal\_copula\_lpdf}}
+\index{multi\_normal\_copula\_lpdf@{multi\_normal\_copula\_lpdf}!Normal Copula Functions@{Normal Copula Functions}}
+\doxysubsubsection{\texorpdfstring{multi\_normal\_copula\_lpdf()}{multi\_normal\_copula\_lpdf()}}
+{\footnotesize\ttfamily real multi\+\_\+normal\+\_\+copula\+\_\+lpdf (\begin{DoxyParamCaption}\item[{matrix}]{u,  }\item[{matrix}]{L }\end{DoxyParamCaption})}
+
+Multi-\/\+Normal Cholesky copula log density
+
+Copyright 2021, Sean Pinkney
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Matrix \\
+\hline
+{\em L} & Cholesky factor matrix \\
+\hline
+{\em log} & density \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__normal_gaeceb683df43c85469ececa537d2e2266}\label{group__normal_gaeceb683df43c85469ececa537d2e2266}} 
+\index{Normal Copula Functions@{Normal Copula Functions}!normal\_copula\_lpdf@{normal\_copula\_lpdf}}
+\index{normal\_copula\_lpdf@{normal\_copula\_lpdf}!Normal Copula Functions@{Normal Copula Functions}}
+\doxysubsubsection{\texorpdfstring{normal\_copula\_lpdf()}{normal\_copula\_lpdf()}}
+{\footnotesize\ttfamily real normal\+\_\+copula\+\_\+lpdf (\begin{DoxyParamCaption}\item[{real}]{u,  }\item[{real}]{v,  }\item[{real}]{rho }\end{DoxyParamCaption})}
+
+Normal copula log density
+
+Copyright Andre Pfeuffer, Sean Pinkney 2017, 2021 ~\newline
+\href{https://groups.google.com/g/stan-users/c/hnUtkMYlLhQ/m/XdX3u1vDAAAJ}{\texttt{ https\+://groups.\+google.\+com/g/stan-\/users/c/hn\+Utk\+MYl\+Lh\+Q/m/\+Xd\+X3u1v\+DAAAJ}} ~\newline
+Accessed and modified Feb. 5, 2021
+
+$x = 100$
+
+Meyer, Christian. \char`\"{}\+The Bivariate Normal Copula.\char`\"{} ar\+Xiv preprint ar\+Xiv\+:0912.\+2816 (2009). Eqn 3.\+3. accessed Feb. 6, 2021.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Real number on (0,1\mbox{]}, not checked but function will return NaN \\
+\hline
+{\em v} & Real number on (0,1\mbox{]}, not checked but function will return NaN \\
+\hline
+{\em rho} & Real number \mbox{[}-\/1, 1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+log density 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__normal_ga09447a56c60491b2e53ed77922e68ece}\label{group__normal_ga09447a56c60491b2e53ed77922e68ece}} 
+\index{Normal Copula Functions@{Normal Copula Functions}!normal\_copula\_vector\_lpdf@{normal\_copula\_vector\_lpdf}}
+\index{normal\_copula\_vector\_lpdf@{normal\_copula\_vector\_lpdf}!Normal Copula Functions@{Normal Copula Functions}}
+\doxysubsubsection{\texorpdfstring{normal\_copula\_vector\_lpdf()}{normal\_copula\_vector\_lpdf()}}
+{\footnotesize\ttfamily real normal\+\_\+copula\+\_\+vector\+\_\+lpdf (\begin{DoxyParamCaption}\item[{vector}]{u,  }\item[{vector}]{v,  }\item[{real}]{rho }\end{DoxyParamCaption})}
+
+Normal copula log density vectorized
+
+Copyright 2021, Sean Pinkney
+
+Meyer, Christian. \char`\"{}\+The Bivariate Normal Copula.\char`\"{} ar\+Xiv preprint ar\+Xiv\+:0912.\+2816 (2009). Eqn 3.\+3. accessed Feb. 6, 2021.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Real number on (0,1\mbox{]}, not checked but function will return NaN \\
+\hline
+{\em v} & Real number on (0,1\mbox{]}, not checked but function will return NaN \\
+\hline
+{\em rho} & Real number \mbox{[}-\/1, 1\mbox{]} \\
+\hline
+{\em log} & density \\
+\hline
+\end{DoxyParams}

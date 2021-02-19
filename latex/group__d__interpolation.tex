@@ -1,0 +1,72 @@
+\hypertarget{group__d__interpolation}{}\doxysection{1-\/dimensional Interpolation Functions}
+\label{group__d__interpolation}\index{1-\/dimensional Interpolation Functions@{1-\/dimensional Interpolation Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{group__d__interpolation_gadfabfb2f306a71faea2ce2f8fa1331ee}{interp\+\_\+1d\+\_\+cubic}} (vector\mbox{[}$\,$\mbox{]} y, data real\mbox{[}$\,$\mbox{]} x, data real\mbox{[}$\,$\mbox{]} x\+\_\+out, vector theta, data real\mbox{[}$\,$\mbox{]} x\+\_\+r, data int\mbox{[}$\,$\mbox{]} x\+\_\+i)
+\item 
+vector\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{group__d__interpolation_ga972ac11c0acfdeee69c3ffcd2a3bc61a}{interp\+\_\+1d\+\_\+linear}} (vector\mbox{[}$\,$\mbox{]} y, data real\mbox{[}$\,$\mbox{]} x, data real\mbox{[}$\,$\mbox{]} x\+\_\+out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DETAILED DESCRIPTION GOES HERE 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__d__interpolation_gadfabfb2f306a71faea2ce2f8fa1331ee}\label{group__d__interpolation_gadfabfb2f306a71faea2ce2f8fa1331ee}} 
+\index{1-\/dimensional Interpolation Functions@{1-\/dimensional Interpolation Functions}!interp\_1d\_cubic@{interp\_1d\_cubic}}
+\index{interp\_1d\_cubic@{interp\_1d\_cubic}!1-\/dimensional Interpolation Functions@{1-\/dimensional Interpolation Functions}}
+\doxysubsubsection{\texorpdfstring{interp\_1d\_cubic()}{interp\_1d\_cubic()}}
+{\footnotesize\ttfamily vector \mbox{[}$\,$\mbox{]} interp\+\_\+1d\+\_\+cubic (\begin{DoxyParamCaption}\item[{vector\mbox{[}$\,$\mbox{]}}]{y,  }\item[{data real\mbox{[}$\,$\mbox{]}}]{x,  }\item[{data real\mbox{[}$\,$\mbox{]}}]{x\+\_\+out,  }\item[{vector}]{theta,  }\item[{data real\mbox{[}$\,$\mbox{]}}]{x\+\_\+r,  }\item[{data int\mbox{[}$\,$\mbox{]}}]{x\+\_\+i }\end{DoxyParamCaption})}
+
+1d interpolation using cubic Hermite splines
+
+Useful for interpolating solutions of autonomous ODEs. Assumes that derivative\+\_\+fun() is defined in the functions block before this function. It must have signature \begin{DoxyVerb}vector derivative_fun(real t, vector y, vector theta, data real[] x_r, 
+ data int[] x_i),
+\end{DoxyVerb}
+ i.\+e. same as what can be used with ODE solvers, but it shouldn\textquotesingle{}t actually use the t argument. Info\+: \href{https://en.wikipedia.org/wiki/Cubic_Hermite_spline}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Cubic\+\_\+\+Hermite\+\_\+spline}}
+
+\begin{DoxyAuthor}{Author}
+Juho Timonen
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em y} & array of D-\/vectors, length N\+\_\+in \\
+\hline
+{\em x} & incresing array of reals, length N\+\_\+in \\
+\hline
+{\em x\+\_\+out} & increasing array of reals, length N\+\_\+out, values must be in (min(x), max(x)\mbox{]} \\
+\hline
+{\em theta} & parameter vector given to derivative\+\_\+fun() \\
+\hline
+{\em x\+\_\+r} & array of real inputs given to derivative\+\_\+fun() \\
+\hline
+{\em x\+\_\+i} & array of integer inputs given to derivative\+\_\+fun() \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of D-\/vectors, length N\+\_\+out, corresponding to interpolated values y\+\_\+out 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__d__interpolation_ga972ac11c0acfdeee69c3ffcd2a3bc61a}\label{group__d__interpolation_ga972ac11c0acfdeee69c3ffcd2a3bc61a}} 
+\index{1-\/dimensional Interpolation Functions@{1-\/dimensional Interpolation Functions}!interp\_1d\_linear@{interp\_1d\_linear}}
+\index{interp\_1d\_linear@{interp\_1d\_linear}!1-\/dimensional Interpolation Functions@{1-\/dimensional Interpolation Functions}}
+\doxysubsubsection{\texorpdfstring{interp\_1d\_linear()}{interp\_1d\_linear()}}
+{\footnotesize\ttfamily vector \mbox{[}$\,$\mbox{]} interp\+\_\+1d\+\_\+linear (\begin{DoxyParamCaption}\item[{vector\mbox{[}$\,$\mbox{]}}]{y,  }\item[{data real\mbox{[}$\,$\mbox{]}}]{x,  }\item[{data real\mbox{[}$\,$\mbox{]}}]{x\+\_\+out }\end{DoxyParamCaption})}
+
+Linear 1d interpolation
+
+\begin{DoxyAuthor}{Author}
+Juho Timonen
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em y} & array of D-\/vectors, length N\+\_\+in \\
+\hline
+{\em x} & incresing array of reals, length N\+\_\+in \\
+\hline
+{\em x\+\_\+out} & increasing array of reals, length N\+\_\+out, values must be in (min(x), max(x)\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of D-\/vectors, length N\+\_\+out, corresponding to interpolated values y\+\_\+out 
+\end{DoxyReturn}
