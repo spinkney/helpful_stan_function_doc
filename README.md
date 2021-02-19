@@ -1,1 +1,1 @@
-# helpful_stan_function_doc
+# A simple README for the gh-pages branch 
